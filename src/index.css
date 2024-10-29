@@ -1,0 +1,107 @@
+:root {
+  --primary: #8B75BB;
+  --secondary: #67707E;
+  --text: #444440;
+  --text-inverse: #E8E8E8;
+  --background: #E8E8E8;
+  --background-primary: #E2DDEE;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+button {
+  all: unset;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: var(--background);
+  text-align: center;
+
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: 300;
+  color: var(--text);
+
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+body::-webkit-scrollbar {
+  display: none;
+}
+
+h1,
+h2 {
+  color: var(--primary);
+  font-family: 'Varela Round', sans-serif;
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: 4.8px;
+}
+
+h1 {
+  font-size: 48px;
+}
+
+h2 {
+  font-size: 40px;
+}
+
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: 400;
+}
+
+h3 {
+  font-size: 32px;
+  letter-spacing: 3.2px;
+  color: var(--text);
+}
+
+h4 {
+  color: var(--primary);
+  font-size: 24px;
+  letter-spacing: 1.2px;
+}
+
+h5 {
+  font-size: 20px;
+  letter-spacing: 1px;
+  color: var(--text);
+}
+
+h6 {
+  font-size: 16px;
+  line-height: 28px;
+  letter-spacing: .8px;
+  color: var(--text);
+}
+
+p {
+  font-size: 12px;
+  line-height: 28px;
+  letter-spacing: .8px;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+}
