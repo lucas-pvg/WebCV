@@ -28,7 +28,7 @@ html {
 
 body {
   margin: 0;
-  background-color: var(--background);
+  background-color: var(--primary);
   text-align: center;
 
   font-family: 'Noto Sans', sans-serif;
@@ -47,7 +47,6 @@ body::-webkit-scrollbar {
 
 h1,
 h2 {
-  color: var(--primary);
   font-family: 'Varela Round', sans-serif;
   font-weight: 400;
   line-height: 1.2;
@@ -55,11 +54,13 @@ h2 {
 }
 
 h1 {
-  font-size: 48px;
+  font-size: 56px;
+  color: var(--text-inverse);
 }
 
 h2 {
   font-size: 40px;
+  color: var(--primary);
 }
 
 h3,
