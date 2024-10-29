@@ -1,0 +1,24 @@
+.list {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  gap: 36px;
+}
+
+.link {
+  text-decoration: none;
+  transition: transform .1s ease-in-out;
+
+  a {
+    color: var(--text-inverse);
+    transition: color .1s ease-in-out;
+  }
+}
+
+.link:hover {
+  transform: scale(1.2);
+
+  a {
+    color: var(--primary);
+  }
+}
