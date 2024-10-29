@@ -1,0 +1,25 @@
+.cover {
+  height: 100vh;
+  width: 100vw;
+  background: fixed url(../../assets/cover-image.png);
+  position: relative;
+}
+
+.cover-navbar {
+  position: absolute;
+  top: 32px;
+  right: 52px;
+  left: auto;
+}
+
+.cover-sidebar {
+  position: absolute;
+  inset: 52px;
+}
+
+.cover-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
