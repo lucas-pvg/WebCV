@@ -11,7 +11,7 @@ export function CoverTitle({ title, description, className }: CoverTitleProps) {
 
   return (
     <div className={classes}>
-      <h1>{ title }</h1>
+      <h1 className={style.title}>{ title }</h1>
       <hr className={style.divider} />
 
       {

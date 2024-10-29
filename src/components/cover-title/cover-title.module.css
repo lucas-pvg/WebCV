@@ -13,8 +13,13 @@
   width: 100%;
 }
 
+.title {
+  text-shadow: var(--shadow);
+}
+
 .description {
-  font-size: 24px;
+  font-size: 20px;
   line-height: 50px;
   color: var(--text-inverse);
+  text-shadow: var(--shadow);
 }

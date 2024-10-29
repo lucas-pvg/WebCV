@@ -5,6 +5,7 @@
   --text-inverse: #E8E8E8;
   --background: #E8E8E8;
   --background-primary: #E2DDEE;
+  --shadow: 8px 8px 24px #1b1b18;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -54,7 +55,7 @@ h2 {
 }
 
 h1 {
-  font-size: 56px;
+  font-size: 48px;
   color: var(--text-inverse);
 }
 
