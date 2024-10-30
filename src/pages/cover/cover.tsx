@@ -1,6 +1,6 @@
 import { CoverNavbar } from '../../components/cover-navbar/cover-navbar'
 import { CoverTitle } from '../../components/cover-title/cover-title'
-import { Sidebar } from '../../components/cover-sidebar/cover-sidebar'
+import { Sidebar } from '../../components/sidebar/sidebar'
 import style from './cover.module.css'
 
 export function Cover() {
