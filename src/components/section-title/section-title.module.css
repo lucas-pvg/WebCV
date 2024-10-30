@@ -1,0 +1,21 @@
+.title {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.left,
+.right {
+  border-style: solid;
+  border-width: 1px;
+  color: var(--primary);
+  transform: translate(0, 5px);
+}
+
+.left {
+  width: 60px;
+}
+
+.right {
+  width: 180px;
+}

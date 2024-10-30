@@ -13,6 +13,36 @@
   display: none;
 }
 
+/* .app-grid {
+  min-height: 100vh;
+  width: 100vw;
+  padding: 32px 52px;
+
+  display: grid;
+  grid-template-rows: 100px 1fr 100px;
+  grid-template-columns: 1fr 50% 1fr;
+  grid-template-areas: 
+    "sidebar header  navbar"
+    "sidebar content navbar"
+    "sidebar footer  navbar"
+  ;
+}
+
+.page-header {
+  grid-area: header;
+}
+
+.page-sidebar {
+  grid-area: sidebar;
+  align-self: center;
+}
+
+.page-content {
+  grid-area: content;
+  overflow: hidden;
+  overflow-y: scroll;
+} */
+
 .page {
   width: 100vw;
   min-height: 100vh;
@@ -20,4 +50,5 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 20px;
 }

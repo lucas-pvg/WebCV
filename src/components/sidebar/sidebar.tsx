@@ -1,6 +1,6 @@
 import { cva, VariantProps } from 'class-variance-authority'
 import { Icon } from '../icon/icon'
-import style from './cover-sidebar.module.css'
+import style from './sidebar.module.css'
 
 const sidebarVariants = cva(
   style.sidebar,
@@ -42,10 +42,17 @@ export function Sidebar({ className, inverse, bottom }: SidebarProps) {
         <Icon className={style['side-icon']} size={32} type='github' inverse={inverse} />
       </div>
 
-      <div className={style['bottom-container']}>
-        <div className={style.box} />
-        <Icon className={style['bottom-icon']} type='down-arrow' size={28} inverse={inverse} />
-      </div>
+      {
+        bottom
+        ? (
+          <div className={style['bottom-container']}>
+            <div className={style.box} />
+            <Icon className={style['bottom-icon']} type='down-arrow' size={28} inverse={inverse} />
+          </div>
+        )
+        : <div className={style.vl} />
+      }
+      
     </div>
   )
 }
