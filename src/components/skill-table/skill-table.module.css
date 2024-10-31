@@ -1,0 +1,10 @@
+.table {
+  width: 300px;
+  border-collapse: separate; 
+  border-spacing: 32px 16px;
+}
+
+.header h5 {
+  text-align: start;
+  margin-bottom: 8px;
+}
