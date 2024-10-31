@@ -2,37 +2,14 @@
   min-height: 100vh;
   width: 100vw;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: start;
-  gap: 50px;
-  /* position: relative;
-  background: var(--background-primary);
-  */
-  padding: 40px; 
+  justify-content: center;
 }
-
-.content {
-  width: 600px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 20px;
-  
-  /* position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -45%);
-  */
-} 
 
 .text {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 12px;
-}
-
-.content p {
   text-align: justify;
 }
