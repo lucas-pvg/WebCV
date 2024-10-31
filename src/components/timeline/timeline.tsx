@@ -2,12 +2,13 @@ import style from './timeline.module.css'
 
 interface TimelineProps {
   className?: string
+  size?: number
 }
 
-export function Timeline({ className }: TimelineProps) {  
+export function Timeline({ className, size=400 }: TimelineProps) {  
   return (
     <div className={className}>
-      <div className={style.event}>
+      <div className={style.event} style={{width: size}}>
         <h6 className={style.year}>2024</h6>
 
         <div className={style.circle} />
@@ -18,7 +19,7 @@ export function Timeline({ className }: TimelineProps) {
         <p className={style.description}>Design and revamp of BTG Investments app screens, using Figma, aimed at improving customer experience.</p>
       </div>
 
-      <div className={style.event}>
+      <div className={style.event} style={{width: size}}>
         <h6 className={style.year}>2024</h6>
 
         <div className={style.circle} />
@@ -29,7 +30,7 @@ export function Timeline({ className }: TimelineProps) {
         <p className={style.description}>Design and revamp of BTG Investments app screens, using Figma, aimed at improving customer experience.</p>
       </div>
 
-      <div className={style.event}>
+      <div className={style.event} style={{width: size}}>
         <h6 className={style.year}>2024</h6>
 
         <div className={style.circle} />
