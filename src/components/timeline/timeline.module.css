@@ -1,11 +1,10 @@
 .event {
-  /* width: 100%; */
   height: fit-content;
   text-align: justify;
 
   display: grid;
   grid-template-rows: 1fr auto auto;
-  grid-template-columns: auto 16px 375px;
+  grid-template-columns: auto 16px 1fr;
   gap: 0 20px;
   grid-template-areas:
     "year circle title"
