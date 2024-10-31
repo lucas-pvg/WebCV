@@ -1,0 +1,43 @@
+.skill {
+  text-align: start;
+  transition: transform .2s ease-in-out;
+}
+
+.skill:hover {
+  cursor: default;
+  transform: scale(1.05);
+
+  .label p {
+    color: var(--primary);
+  }
+
+  .circle {
+    opacity: 100%;
+  }
+}
+
+.label p {
+  font-size: 16px;
+  line-height: normal;
+  transition: color .2s ease-in-out;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 7px;
+}
+
+.circle {
+  width: 10px;
+  height: 10px;
+  border: solid 1px var(--primary);
+  border-radius: 50%;
+  opacity: 50%;
+  transition: opacity .2s ease-in-out;
+}
+
+.full {
+  background: var(--primary);
+}

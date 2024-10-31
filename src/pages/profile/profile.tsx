@@ -6,7 +6,7 @@ import style from './profile.module.css'
 
 export function Profile() {  
   return (
-    <div id='profile' className={`${style.profile}`}>
+    <div id='profile' className={[style.profile, 'page'].join(' ')}>
       <Page title='Profile' >
         <ProfilePic />
 
