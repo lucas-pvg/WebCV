@@ -1,0 +1,24 @@
+.content {
+  width: fit-content;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto 1fr;
+  gap: 20px 32px;
+  grid-template-areas: 
+    "tech tools"
+    "tech lang"
+  ;
+}
+
+.tech { 
+  grid-area: tech;
+  height: fit-content;
+}
+
+.tools { 
+  grid-area: tools;
+}
+
+.lang { 
+  grid-area: lang;
+}
