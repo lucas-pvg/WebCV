@@ -1,15 +1,15 @@
-.profile {
+.experience {
   min-height: 100vh;
   width: 100vw;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-
-.text {
+  
+.content {
+  width: fit-content;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  gap: 12px;
-  text-align: justify;
+  align-items: center;
+  gap: 20px;
 }

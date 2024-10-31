@@ -3,6 +3,7 @@
 
 import { Cover } from './pages/cover/cover'
 import { Profile } from './pages/profile/profile'
+import { Experience } from './pages/experience/experience'
 import './App.css'
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
     <div className='app'>
       <Cover />
       <Profile />
+      <Experience />
 
       {/* <main className='app-grid'>
         <Header className='page-header' title='Profile' />
