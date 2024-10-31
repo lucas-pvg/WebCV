@@ -6,7 +6,7 @@ import style from './experience.module.css'
 
 export function Experience() {  
   return (
-    <div id='experience' className={style.experience}>
+    <div id='experience' className={[style.experience, 'page'].join(' ')}>
       <Page 
         title='Experience'
         description="Here's a timeline of my working experience up until now along with a summary of what I developed in each one of them."
