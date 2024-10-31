@@ -1,3 +1,7 @@
+.education {
+  background-color: var(--background);
+}
+
 .content {
   width: fit-content;
   display: flex;

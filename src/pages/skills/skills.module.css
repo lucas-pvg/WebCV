@@ -1,3 +1,7 @@
+.skills {
+  background-color: var(--background-primary);
+}
+
 .content {
   width: fit-content;
   display: grid;

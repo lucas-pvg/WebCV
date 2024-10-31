@@ -1,3 +1,7 @@
+.profile {
+  background-color: var(--background-primary);
+}
+
 .text {
   display: flex;
   flex-direction: column;
