@@ -3,9 +3,11 @@ import style from './profile-pic.module.css'
 
 interface ProfilePicProps {
   className?: string
+  name: string
+  subtitles: string[]
 }
 
-export function ProfilePic({ className }: ProfilePicProps) {
+export function ProfilePic({ className, name, subtitles }: ProfilePicProps) {
   const classes = className ? `${style.profile} ${className}` : style.profile
   
   return (
@@ -13,11 +15,14 @@ export function ProfilePic({ className }: ProfilePicProps) {
       <img src={ProfileIMG} />
 
       <div className={style.label}>
-        <h3>Lucas Pavan Garieri</h3>
+        <h3>{ name }</h3>
         
         <div className={style.italic}>
-          <p>Junior front-end developer and web designer</p>
-          <p>Graduated in Computer Engineering from USP</p>
+          {
+            subtitles.map((sub, index) => { return (
+              <p key={index}>{ sub }</p>
+            )})
+          }
         </div>
       </div>
     </div>

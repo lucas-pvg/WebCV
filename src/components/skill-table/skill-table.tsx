@@ -1,13 +1,16 @@
 import { ComponentProps } from 'react'
 import { Skill } from '../skill/skill'
+import { SkillInterface } from '../../data/skill'
 import style from './skill-table.module.css'
 
 interface SkillTableProps extends ComponentProps<'table'> {
   className?: string
   label: string
+  data?: SkillInterface[]
+  rating?: boolean
 }
 
-export function SkillTable({ className, label, ...props }: SkillTableProps) {
+export function SkillTable({ className, label, data=[], rating=false, ...props }: SkillTableProps) {
   const classes = className ? `${style.table} ${className}` : style.table
 
   return (
@@ -19,9 +22,13 @@ export function SkillTable({ className, label, ...props }: SkillTableProps) {
       </thead>
 
       <tbody>
-        <Skill label='HTML/5' rating={4} />
-        <Skill label='CSS/3' rating={4} />
-        <Skill label='TypeScript' rating={3} />
+        {
+          data.map((skill, index) => { return (
+            rating
+            ? <Skill label={skill.label} rating={skill.rating} key={index} />
+            : <Skill label={skill.label} key={index} />
+          )})
+        }
       </tbody>
     </table>
   )

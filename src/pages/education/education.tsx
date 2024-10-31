@@ -1,10 +1,14 @@
+import { useContext } from 'react'
+import { ProfileContext } from '../../context/ProfileContext'
 import { Page } from '../page/page'
 import { SectionTitle } from '../../components/section-title/section-title'
 import { Timeline } from '../../components/timeline/timeline'
 
 import style from './education.module.css'
 
-export function Education() {  
+export function Education() {
+  const profile = useContext(ProfileContext)
+
   return (
     <div id='education' className={[style.education, 'page'].join(' ')}>
       <Page 
@@ -13,13 +17,13 @@ export function Education() {
       >
         <div className={style.content}>
           <section className={style.section}>
-            <SectionTitle title='Education' />
-            <Timeline size={350} />
+            <SectionTitle title='Academic' />
+            <Timeline size={360} data={profile.education.academic} />
           </section>
 
           <section className={style.section}>
             <SectionTitle title='Courses' />
-            <Timeline size={350} />
+            <Timeline size={360} data={profile.education.courses} />
           </section>
         </div>
       </Page>

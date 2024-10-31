@@ -1,0 +1,92 @@
+{
+  "name": "Lucas Pavan Garieri",
+  "title": "A React Front-End Developer and Web Designer",
+  "subtitles": [
+    "Junior front-end developer and web designer",
+    "Graduated in Computer Engineering from USP"
+  ],
+  "contact": [
+    { "label": "Email", "value": "lucaspvg1@gmail.com" },
+    { "label": "Phone", "value": "+55 (61) 982653119" },
+    { "label": "Github", "value": "https://github.com/lucas-pvg" },
+    { "label": "LinkedIn", "value": "https://www.linkedin.com/in/lucas-pvg/" }
+  ],
+
+  "about": [
+    "Tenho 21 anos e sou apaixonado por programação, desenvolvimento front-end e UX/UI design. Atualmente curso engenharia da computação na Escola Politécnica da USP enquanto procuro complementar minha formação, de maneira mais focada em minhas áreas de interesse, com projetos, cursos e outras oportunidades.",
+    "Também sou apaixonado por música e participei de uma orquestra, nos meus ensinos fundamental e médio, durante 7 anos. A música faz parte da minha rotina, de modo que, quando não estou tocando ou aprendendo algum instrumento, estou ouvindo ou pesquisando sobre. Atualmente, toco saxofone tenor, um pouco de flauta transversal e estou tentando aprender teclado."
+  ],
+
+  "experience": [
+    {
+      "label": "UX Design Internship",
+      "institution": "BTG Pactual",
+      "year_start": 2024,
+      "year_end": 2024,
+      "duration": { "value": 4, "metric": "month" },
+      "description": "Design and revamp of BTG Investments app screens, using Figma, aimed at improving customer experience."
+    },
+    {
+      "label": "Software Development Intership",
+      "institution": "BTG Pactual",
+      "year_start": 2023,
+      "year_end": 2023,
+      "duration": { "value": 8, "metric": "month" },
+      "description": "Development of web solutions and data products for the BTG Pactual Data Analytics team to use within their workflow."
+    },
+    {
+      "label": "Data Science Intership",
+      "institution": "Taqtile",
+      "year_start": 2022,
+      "year_end": 2022,
+      "duration": { "value": 4, "metric": "month" },
+      "description": "Research on machine learning models and development of dashboards for an e-commerce platform monitoring."
+    }
+  ],
+
+  "skills": [
+    { "label": "HTML/5",              "rating": 4, "category": "technology" },
+    { "label": "CSS/3",               "rating": 4, "category": "technology" },
+    { "label": "JavaScript",          "rating": 4, "category": "technology" },
+    { "label": "TypeScript",          "rating": 3, "category": "technology" },
+    { "label": "Python",              "rating": 4, "category": "technology" },
+    { "label": "React",               "rating": 3, "category": "technology" },
+    { "label": "Redux",               "rating": 3, "category": "technology" },
+    { "label": "SQL",                 "rating": 3, "category": "technology" },
+    { "label": "GIT",                 "rating": 4, "category": "technology" },
+    { "label": "Github",              "rating": 4, "category": "tool" },
+    { "label": "Figma",               "rating": 4, "category": "tool" },
+    { "label": "Scrum / Agile",       "rating": 3, "category": "tool" },
+    { "label": "Portuguese (native)", "rating": 5, "category": "language" },
+    { "label": "English (advanced)",  "rating": 4, "category": "language" }
+  ],
+
+  "education": {
+    "academic": [
+      {
+        "label": "Bachelor's Degree in Computer Engineering",
+        "institution": "University of Sao Paulo - Brazil",
+        "year_start": 2020,
+        "year_end": 2024,
+        "description": "A 5 year bachelor's degree in Computer Engineering with 4 modules dedicated for 4 months internships."
+      }
+    ],
+
+    "courses": [
+      {
+        "label": "Front-End Engineer Career Path",
+        "institution": "Codecademy",
+        "year_start": 2024,
+        "year_end": 2024,
+        "description": ""
+      },
+      {
+        "label": "Data Scientist in Python Course",
+        "institution": "Dataquest.io",
+        "year_start": 2020,
+        "year_end": 2021,
+        "description": ""
+      }
+    ]
+  }
+}

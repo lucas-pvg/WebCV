@@ -17,8 +17,10 @@
 
 .tools { 
   grid-area: tools;
+  height: fit-content;
 }
 
 .lang { 
   grid-area: lang;
+  height: fit-content;
 }
