@@ -60,7 +60,7 @@ h1 {
 }
 
 h2 {
-  font-size: 36px;
+  font-size: 28px;
   color: var(--primary);
 }
 
@@ -73,25 +73,25 @@ h6 {
 }
 
 h3 {
-  font-size: 28px;
+  font-size: 24px;
   letter-spacing: 3.2px;
   color: var(--text);
 }
 
 h4 {
   color: var(--primary);
-  font-size: 20px;
+  font-size: 18px;
   letter-spacing: 1.2px;
 }
 
 h5 {
-  font-size: 18px;
+  font-size: 16px;
   letter-spacing: 1px;
   color: var(--text);
 }
 
 h6 {
-  font-size: 16px;
+  font-size: 14px;
   line-height: 28px;
   letter-spacing: .8px;
   color: var(--text);
@@ -106,4 +106,5 @@ p {
 a {
   display: inline-block;
   text-decoration: none;
+  font-size: 14px;
 }

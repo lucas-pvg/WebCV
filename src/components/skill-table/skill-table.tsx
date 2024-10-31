@@ -17,7 +17,7 @@ export function SkillTable({ className, label, data=[], rating=false, ...props }
     <table className={classes} {...props}>
       <thead>
         <tr className={style.header}>
-          <th colSpan={2}><h5>{ label }</h5></th>
+          <th colSpan={2}><h6>{ label }</h6></th>
         </tr>
       </thead>
 
