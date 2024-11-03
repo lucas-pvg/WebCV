@@ -1,10 +1,6 @@
 .cover {
-  height: 100vh;
-  width: 100vw;
   background: linear-gradient(#382B4430, #382B4430), url(../../assets/cover-image.png);
   background-attachment: fixed;
-  position: relative;
-  scroll-snap-align: start;
 }
 
 .cover-navbar {
