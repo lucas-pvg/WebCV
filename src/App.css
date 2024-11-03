@@ -12,10 +12,24 @@
   display: none;
 }
 
+.app {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+  overflow-y: scroll;
+}
+
 .page {
   width: 100vw;
-  min-height: 100vh;
+  height: 100vh;
+
   display: flex;
   justify-content: center;
   align-items: center;
+  scroll-snap-align: start;
+  position: absolute;
+  z-index: 0;
 }

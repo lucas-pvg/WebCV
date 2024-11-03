@@ -2,20 +2,21 @@ import style from './cover-navbar.module.css'
 
 interface CoverNavbarProps {
   className?: string
+  navigate: Function
 }
 
-export function CoverNavbar({ className }: CoverNavbarProps) {
+export function CoverNavbar({ className, navigate }: CoverNavbarProps) {
   const classes = `${className ? className : ''}`
 
   return (
     <nav className={classes}>
       <ul className={style.list}>
-        <li className={style.link}><a href="#profile">Profile</a></li>
-        <li className={style.link}><a href="#education">Experience</a></li>
-        <li className={style.link}><a href="#skills">Skills</a></li>
-        <li className={style.link}><a href="#experience">Education</a></li>
-        <li className={style.link}><a href="#projects">Projects</a></li>
-        <li className={style.link}><a href="#contacts">Contact</a></li>
+        <li onClick={() => navigate('#profile')} className={style.link}>Profile</li>
+        <li onClick={() => navigate('#experience')} className={style.link}>Experience</li>
+        <li onClick={() => navigate('#skills')} className={style.link}>Skills</li>
+        <li onClick={() => navigate('#education')} className={style.link}>Education</li>
+        <li className={style.link}>Projects</li>
+        <li className={style.link}>Contact</li>
       </ul>
     </nav>
   )

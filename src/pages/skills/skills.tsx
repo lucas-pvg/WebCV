@@ -5,11 +5,16 @@ import { SkillTable } from '../../components/skill-table/skill-table'
 
 import style from './skills.module.css'
 
-export function Skills() { 
+interface SkillsProps {
+  zIndex?: number
+}
+
+export function Skills({ zIndex=0 }: SkillsProps) { 
   const profile = useContext(ProfileContext)
+  const defaultClasses = [style.skills, 'page'].join(' ')
 
   return (
-    <div id='skills' className={[style.skills, 'page'].join(' ')}>
+    <div id='skills' style={{zIndex: zIndex}} className={defaultClasses}>
       <Page 
         title='Skills'
         description="Here's a summary of the most import skills I developed with my experience as a front-end developer and web designer."

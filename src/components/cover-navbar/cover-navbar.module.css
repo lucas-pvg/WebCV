@@ -7,18 +7,15 @@
 
 .link {
   text-decoration: none;
-  transition: transform .1s ease-in-out;
-
-  a {
-    color: var(--text-inverse);
-    transition: color .1s ease-in-out;
-  }
+  color: var(--text-inverse);
+  transition: 
+    transform .1s ease-in-out,
+    color .1s ease-in-out
+  ;
 }
 
 .link:hover {
-  transform: scale(1.2);
-
-  a {
-    color: var(--primary);
-  }
+  cursor: pointer;
+  color: var(--primary);
+  transform: scale(1.1);
 }

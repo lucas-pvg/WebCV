@@ -6,11 +6,16 @@ import { SectionTitle } from '../../components/section-title/section-title'
 
 import style from './profile.module.css'
 
-export function Profile() {  
+interface ProfileProps {
+  zIndex?: number
+}
+
+export function Profile({ zIndex=0 }: ProfileProps) {  
   const profile = useContext(ProfileContext)
+  const defaultClasses = [style.profile, 'page'].join(' ')
 
   return (
-    <div id='profile' className={[style.profile, 'page'].join(' ')}>
+    <div id='profile' style={{zIndex: zIndex}} className={defaultClasses}>
       <Page title='Profile' >
         <ProfilePic name={profile.name} subtitles={profile.subtitles} />
 
