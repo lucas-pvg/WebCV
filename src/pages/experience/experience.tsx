@@ -6,11 +6,16 @@ import { Timeline } from '../../components/timeline/timeline'
 
 import style from './experience.module.css'
 
-export function Experience() {  
+interface ExperienceProps {
+  zIndex?: number
+}
+
+export function Experience({ zIndex=0 }: ExperienceProps) {  
   const profile = useContext(ProfileContext)
+  const defaultClasses = [style.experience, 'page'].join(' ')
 
   return (
-    <div id='experience' className={[style.experience, 'page'].join(' ')}>
+    <div id='experience' style={{zIndex: zIndex}} className={defaultClasses}>
       <Page 
         title='Experience'
         description="Here's a timeline of my working experience up until now along with a summary of what I developed in each one of them."
