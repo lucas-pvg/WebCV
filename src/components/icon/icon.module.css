@@ -1,8 +1,8 @@
-.icon {
-  transition: transform .1s ease-in-out;
+.hover {
+  transition: transform .2s ease-in-out;
 }
 
-.icon:hover {
+.hover:hover {
   transform: scale(1.1);
   cursor: pointer;
 }
