@@ -6,10 +6,10 @@
     "Graduated in Computer Engineering from USP"
   ],
   "contact": [
-    { "label": "Email", "value": "lucaspvg1@gmail.com" },
-    { "label": "Phone", "value": "+55 (61) 982653119" },
-    { "label": "Github", "value": "https://github.com/lucas-pvg" },
-    { "label": "LinkedIn", "value": "https://www.linkedin.com/in/lucas-pvg/" }
+    { "label": "email", "value": "lucaspvg1@gmail.com", "link": false},
+    { "label": "whatsapp", "value": "+55 (61) 982653119", "link": false },
+    { "label": "github", "value": "https://github.com/lucas-pvg", "link": true },
+    { "label": "linkedin", "value": "https://www.linkedin.com/in/lucas-pvg/", "link": true }
   ],
 
   "about": [

@@ -20,7 +20,13 @@ export function Cover({ navigate, zIndex=0, visible=false }: CoverProps) {
   return (
     <div id='cover' style={{zIndex: zIndex}} className={defaultClasses}>
       <CoverNavbar navigate={navigate} className={style['cover-navbar']} />
-      <Sidebar className={style['cover-sidebar']} inverse bottom/>
+      <Sidebar
+        className={style['cover-sidebar']}
+        linkedin={profile.contact.find((c) => c.label === 'linkedin')?.value}
+        github={profile.contact.find((c) => c.label === 'github')?.value}
+        inverse
+        bottom
+      />
 
       <AnimatePresence>
         {

@@ -16,7 +16,7 @@ export function CoverNavbar({ className, navigate }: CoverNavbarProps) {
         <li onClick={() => navigate('#skills')} className={style.link}>Skills</li>
         <li onClick={() => navigate('#education')} className={style.link}>Education</li>
         <li className={style.link}>Projects</li>
-        <li className={style.link}>Contact</li>
+        <li onClick={() => navigate('#contact')} className={style.link}>Contact</li>
       </ul>
     </nav>
   )
