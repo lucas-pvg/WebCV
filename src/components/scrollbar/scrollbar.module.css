@@ -1,0 +1,24 @@
+.scrollbar {
+  width: 3px;
+  height: 50%;
+  background-color: var(--text);
+  border-radius: 10px;
+  overflow: hidden;
+
+  position: absolute;
+  right: 52px;
+  top: 55%;
+  transform: translate(0, -50%);
+  z-index: 100;
+}
+
+.bar {
+  width: 3px;
+  height: 100%;
+  background-color: var(--primary);
+  border-radius: 10px;
+  transform-origin: top;
+
+  position: relative;
+  top: 0;
+}
