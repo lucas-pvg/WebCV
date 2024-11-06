@@ -18,8 +18,8 @@ export function Page({ className, title, description, children }: PageProps) {
       className={classes}
       exit={{ opacity: 0 }}
       transition={{
-        duration: 1,
-        ease: [0, 0.71, 0.2, 1.01]
+        duration: .5,
+        ease: 'easeOut'
       }}
     >
       <Header
