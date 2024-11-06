@@ -27,7 +27,7 @@ export function Timeline({ className, size=400, data=[] }: TimelineProps) {
       {
         data.map((e, index) => { return (
           <div key={index} className={style.event} style={{width: size}}>
-            <h6 className={style.year}>{ e.yearStart }</h6>
+            <h6 className={style.year}>{ e.yearEnd }</h6>
 
             <div className={style.circle} />
             <div className={style.vl} />
