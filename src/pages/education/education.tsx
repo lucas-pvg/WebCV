@@ -1,4 +1,5 @@
 import { useContext } from 'react'
+import { AnimatePresence } from 'framer-motion'
 import { ProfileContext } from '../../context/ProfileContext'
 import { Page } from '../page/page'
 import { SectionTitle } from '../../components/section-title/section-title'
@@ -17,6 +18,7 @@ export function Education({ zIndex=0, visible=false }: EducationProps) {
 
   return (
     <div id='education' style={{zIndex: zIndex}} className={defaultClasses}>
+      <AnimatePresence>
       {
         visible &&
         <Page 
@@ -36,6 +38,7 @@ export function Education({ zIndex=0, visible=false }: EducationProps) {
           </div>
         </Page>
       }
+      </AnimatePresence>
     </div>
   )
 }

@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion'
+import { AnimatePresence } from 'framer-motion'
 import { useContext } from 'react'
 import { ProfileContext } from '../../context/ProfileContext'
 import { Page } from '../page/page'
@@ -18,21 +18,23 @@ export function Profile({ zIndex=0, visible=false }: ProfileProps) {
 
   return (
     <div id='profile' style={{zIndex: zIndex}} className={defaultClasses}>
+      <AnimatePresence>
       {
         visible &&
         <Page title='Profile' >
           <ProfilePic name={profile.name} subtitles={profile.subtitles} />
 
-          <motion.section className={style.text}>
+          <section className={style.text}>
             <SectionTitle title='About Me' />
             {
               profile.about.map((text, index) => { return (
                 <p key={index}>{ text }</p>
               )})
             }
-          </motion.section>
+          </section>
         </Page>
       }
+      </AnimatePresence>
     </div>
   )
 }

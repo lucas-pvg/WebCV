@@ -1,4 +1,5 @@
 import { useContext } from 'react'
+import { AnimatePresence } from 'framer-motion'
 import { ProfileContext } from '../../context/ProfileContext'
 import { Page } from '../page/page'
 import { SectionTitle } from '../../components/section-title/section-title'
@@ -17,6 +18,7 @@ export function Experience({ zIndex=0, visible=false }: ExperienceProps) {
 
   return (
     <div id='experience' style={{zIndex: zIndex}} className={defaultClasses}>
+      <AnimatePresence>
       {
         visible &&
         <Page 
@@ -29,6 +31,7 @@ export function Experience({ zIndex=0, visible=false }: ExperienceProps) {
           </section>
         </Page>
       }
+      </AnimatePresence>
     </div>
   )
 }

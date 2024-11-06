@@ -1,4 +1,5 @@
 import { useContext } from 'react'
+import { AnimatePresence } from 'framer-motion'
 import { ProfileContext } from '../../context/ProfileContext'
 import { Page } from '../page/page'
 import { SkillTable } from '../../components/skill-table/skill-table'
@@ -16,6 +17,7 @@ export function Skills({ zIndex=0, visible=false }: SkillsProps) {
 
   return (
     <div id='skills' style={{zIndex: zIndex}} className={defaultClasses}>
+      <AnimatePresence>
       {
         visible &&
         <Page 
@@ -45,6 +47,7 @@ export function Skills({ zIndex=0, visible=false }: SkillsProps) {
           </section>
         </Page>
       }
+      </AnimatePresence>
     </div>
   )
 }
