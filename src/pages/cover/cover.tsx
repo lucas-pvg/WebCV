@@ -1,4 +1,5 @@
 import { useContext } from 'react'
+import { AnimatePresence } from 'framer-motion'
 import { ProfileContext } from '../../context/ProfileContext'
 import { CoverNavbar } from '../../components/cover-navbar/cover-navbar'
 import { CoverTitle } from '../../components/cover-title/cover-title'
@@ -9,9 +10,10 @@ import style from './cover.module.css'
 interface CoverProps {
   navigate: Function
   zIndex?: number
+  visible?: boolean
 }
 
-export function Cover({ navigate, zIndex=0 }: CoverProps) {
+export function Cover({ navigate, zIndex=0, visible=false }: CoverProps) {
   const profile = useContext(ProfileContext)
   const defaultClasses = [style.cover, 'page'].join(' ')
 
@@ -20,11 +22,16 @@ export function Cover({ navigate, zIndex=0 }: CoverProps) {
       <CoverNavbar navigate={navigate} className={style['cover-navbar']} />
       <Sidebar className={style['cover-sidebar']} inverse bottom/>
 
-      <CoverTitle
-        className={style['cover-title']}
-        title={profile.name}
-        description={profile.title}
-      />
+      <AnimatePresence>
+        {
+          visible &&
+          <CoverTitle
+            className={style['cover-title']}
+            title={profile.name}
+            description={profile.title}
+          />
+        }
+      </AnimatePresence>
     </div>
   )
 }

@@ -8,30 +8,34 @@ import style from './education.module.css'
 
 interface EducationProps {
   zIndex?: number
+  visible?: boolean
 }
 
-export function Education({ zIndex=0 }: EducationProps) {
+export function Education({ zIndex=0, visible=false }: EducationProps) {
   const profile = useContext(ProfileContext)
   const defaultClasses = [style.education, 'page'].join(' ')
 
   return (
     <div id='education' style={{zIndex: zIndex}} className={defaultClasses}>
-      <Page 
-        title='Education'
-        description="Here's a timeline of my educational experience up until now along with the courses I've enrolled and certificationsof I've earned. "
-      >
-        <div className={style.content}>
-          <section className={style.section}>
-            <SectionTitle title='Academic' />
-            <Timeline size={360} data={profile.education.academic} />
-          </section>
+      {
+        visible &&
+        <Page 
+          title='Education'
+          description="Here's a timeline of my educational experience up until now along with the courses I've enrolled and certificationsof I've earned. "
+        >
+          <div className={style.content}>
+            <section className={style.section}>
+              <SectionTitle title='Academic' />
+              <Timeline size={360} data={profile.education.academic} />
+            </section>
 
-          <section className={style.section}>
-            <SectionTitle title='Courses' />
-            <Timeline size={360} data={profile.education.courses} />
-          </section>
-        </div>
-      </Page>
+            <section className={style.section}>
+              <SectionTitle title='Courses' />
+              <Timeline size={360} data={profile.education.courses} />
+            </section>
+          </div>
+        </Page>
+      }
     </div>
   )
 }
