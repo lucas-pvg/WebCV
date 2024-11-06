@@ -3,8 +3,8 @@ import style from './profile-pic.module.css'
 
 interface ProfilePicProps {
   className?: string
-  name: string
-  subtitles: string[]
+  name?: string
+  subtitles?: string[]
 }
 
 export function ProfilePic({ className, name, subtitles }: ProfilePicProps) {
@@ -15,10 +15,11 @@ export function ProfilePic({ className, name, subtitles }: ProfilePicProps) {
       <img src={ProfileIMG} />
 
       <div className={style.label}>
-        <h3>{ name }</h3>
+        { name && <h3>{ name }</h3> }
         
         <div className={style.italic}>
           {
+            subtitles &&
             subtitles.map((sub, index) => { return (
               <p key={index}>{ sub }</p>
             )})
