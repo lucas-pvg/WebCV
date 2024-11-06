@@ -41,12 +41,15 @@ export const useNavigate = (pages: string[]) => {
     if (scrollLock || pageIndex === currentPage || pageIndex < 0 || pageIndex >= pages.length) return
     lockScroll()
 
+    const animations = []
     for (let i = currentPage; i !== pageIndex; i += pageIndex > currentPage ? 1 : -1) {
-      animatePage(i, pageIndex > currentPage ? 'up' : 'down')
+      animations.push(animatePage(i, pageIndex > currentPage ? 'up' : 'down'))
     }
 
-    setCurrentPage(pageIndex)
-    unlockScroll()
+    Promise.all(animations).then(() => {
+      setCurrentPage(pageIndex)
+      unlockScroll()
+    })
   }, [scrollLock, currentPage, pages.length, animatePage, lockScroll, unlockScroll]
   )
 

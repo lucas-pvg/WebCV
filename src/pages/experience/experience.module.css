@@ -3,6 +3,7 @@
 }
 
 .content {
+  transform: translate(0, 8%);
   width: fit-content;
   display: flex;
   flex-direction: column;
