@@ -4,6 +4,7 @@ import { EventInterface } from "./event";
 export interface Contact {
   label: string
   value: string
+  link: boolean
 }
 
 export interface ProfileInterface {
