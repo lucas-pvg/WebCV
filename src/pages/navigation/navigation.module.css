@@ -7,3 +7,8 @@
   scroll-behavior: smooth;
   overflow-y: scroll;
 }
+
+.sidebar {
+  position: absolute;
+  inset: 52px;
+}

@@ -26,15 +26,16 @@ interface SidebarProps extends VariantProps<typeof sidebarVariants> {
   className?: string
   inverse?: boolean
   bottom?: boolean
+  zIndex?: number
 }
 
-export function Sidebar({ className, inverse, bottom }: SidebarProps) {
+export function Sidebar({ className, inverse, bottom, zIndex=0 }: SidebarProps) {
   const classes = className
     ? `${sidebarVariants({ inverse, bottom })} ${className}`
     : sidebarVariants({ inverse, bottom })
 
   return (
-    <div className={classes}>
+    <div className={classes} style={{zIndex: zIndex}}>
       <div className={style.vl} />
 
       <div className={style.icons}>
