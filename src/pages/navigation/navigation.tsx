@@ -31,7 +31,12 @@ export function Navigation() {
   
   return (
     <div className={style.navigation}>
-      <Sidebar zIndex={pages.length} className={style.sidebar} />
+      <Sidebar 
+        linkedin={profile.contact.find((c) => c.label === 'linkedin')?.value}
+        github={profile.contact.find((c) => c.label === 'github')?.value}
+        zIndex={pages.length} 
+        className={style.sidebar}
+      />
       
       <div ref={scope} className='pages' onWheel={handleScroll}>
         <Cover zIndex={pages.length} visible={navigate.currentPage === 0 && navigate.animationEnded} navigate={navigate.goToPage} />
