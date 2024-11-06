@@ -22,9 +22,9 @@ export function Navigation() {
   const { scope, ...navigate } = useNavigate(pages)
 
   const handleScroll = (e: any) => {
-    if (e.deltaY > 0) {
+    if (e.deltaY > 5) {
       navigate.nextPage();
-    } else if (e.deltaY < 0) {
+    } else if (e.deltaY < -5) {
       navigate.prevPage();
     }
   };
@@ -34,11 +34,11 @@ export function Navigation() {
       <Sidebar zIndex={pages.length} className={style.sidebar} />
       
       <div ref={scope} className='pages' onWheel={handleScroll}>
-        <Cover zIndex={pages.length} navigate={navigate.goToPage} />
-        <Profile zIndex={pages.length - 1} />
-        <Experience zIndex={pages.length - 2} />
-        <Skills zIndex={pages.length - 3} />
-        <Education zIndex={pages.length - 4} />
+        <Cover zIndex={pages.length} visible={navigate.currentPage === 0 && navigate.animationEnded} navigate={navigate.goToPage} />
+        <Profile zIndex={pages.length - 1} visible={navigate.currentPage === 1 && navigate.animationEnded} />
+        <Experience zIndex={pages.length - 2} visible={navigate.currentPage === 2 && navigate.animationEnded} />
+        <Skills zIndex={pages.length - 3} visible={navigate.currentPage === 3 && navigate.animationEnded} />
+        <Education zIndex={pages.length - 4} visible={navigate.currentPage === 4 && navigate.animationEnded} />
       </div>
 
       <Scrollbar progress={(navigate.currentPage + 1) / pages.length}/>
