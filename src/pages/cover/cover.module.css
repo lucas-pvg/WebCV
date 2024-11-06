@@ -1,6 +1,11 @@
 .cover {
   background: linear-gradient(#382B4430, #382B4430), url(../../assets/cover-image.png);
   background-attachment: fixed;
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .cover-navbar {
@@ -13,11 +18,4 @@
 .cover-sidebar {
   position: absolute;
   inset: 52px;
-}
-
-.cover-title {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
