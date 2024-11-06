@@ -1,15 +1,24 @@
-import { ComponentProps } from 'react'
+import { motion } from 'framer-motion'
 import style from './skill.module.css'
 
-interface SkillProps extends ComponentProps<'tr'> {
-  className?: string
+interface SkillProps {
   label: string
   rating?: 0 | 1 | 2 | 3 | 4 | 5
+  index?: number
 }
 
-export function Skill({ className, label, rating, ...props }: SkillProps) {
+export function Skill({ label, rating, index=0 }: SkillProps) {
   return (
-    <tr className={style.skill} {...props}>
+    <motion.tr 
+      className={style.skill}
+      initial={{ opacity: 0, transform: "translate(-32px)" }}
+      animate={{ opacity: 1, transform: "translate(0)" }}
+      transition={{ 
+        duration: .5, 
+        delay: .3 + (index * 0.1), 
+        ease: 'easeOut'
+      }}
+    >
       <td className={style.label}>
         <p>{ label }</p>
       </td>
@@ -25,6 +34,6 @@ export function Skill({ className, label, rating, ...props }: SkillProps) {
           }
         </div>
       </td>
-    </tr>
+    </motion.tr>
   )
 }
