@@ -21,7 +21,7 @@ export function CoverNavbar({ className, navigate, download=false }: CoverNavbar
         
         {
           download && 
-          <a className={style.download} href='/src/data/resume/cv-en.pdf' download>
+          <a className={style.download} href='/public/cv-en.pdf' download>
             <li className={style.link}>Download CV</li>
           </a>
         }
