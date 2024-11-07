@@ -3,9 +3,10 @@ import style from './cover-navbar.module.css'
 interface CoverNavbarProps {
   className?: string
   navigate: Function
+  download?: boolean
 }
 
-export function CoverNavbar({ className, navigate }: CoverNavbarProps) {
+export function CoverNavbar({ className, navigate, download=false }: CoverNavbarProps) {
   const classes = `${className ? className : ''}`
 
   return (
@@ -17,6 +18,13 @@ export function CoverNavbar({ className, navigate }: CoverNavbarProps) {
         <li onClick={() => navigate('#education')} className={style.link}>Education</li>
         <li className={style.link}>Projects</li>
         <li onClick={() => navigate('#contact')} className={style.link}>Contact</li>
+        
+        {
+          download && 
+          <a className={style.download} href='/src/data/resume/cv-en.pdf' download>
+            <li className={style.link}>Download CV</li>
+          </a>
+        }
       </ul>
     </nav>
   )
