@@ -1,0 +1,100 @@
+{
+  "name": "Lucas Pavan Garieri",
+  "title": "Desenvolvedor Front-End e Web Designer",
+  "subtitles": [
+    "Desenvolvedor Front-End Junior e Web Designer",
+    "Engenheiro de Computação pela Escola Politécnica da USP"
+  ],
+  "contact": [
+    { "label": "email",    "value": "lucaspvg1@gmail.com",                    "link": false },
+    { "label": "whatsapp", "value": "+55 (61) 982653119",                     "link": false },
+    { "label": "github",   "value": "https://github.com/lucas-pvg",           "link": true },
+    { "label": "linkedin", "value": "https://www.linkedin.com/in/lucas-pvg/", "link": true }
+  ],
+
+  "about": [
+    "Tenho 23 anos e sou apaixonado por programação, desenvolvimento front-end e UX/UI design. Atualmente curso engenharia da computação na Escola Politécnica da USP enquanto procuro complementar minha formação, de maneira mais focada em minhas áreas de interesse, com projetos, cursos e outras oportunidades.",
+    "Também sou apaixonado por música e participei de uma orquestra, nos meus ensinos fundamental e médio, durante 7 anos. A música faz parte da minha rotina, de modo que, quando não estou tocando ou aprendendo algum instrumento, estou ouvindo ou pesquisando sobre. Atualmente, toco saxofone tenor, um pouco de flauta transversal e estou tentando aprender teclado."
+  ],
+
+  "experience": [
+    {
+      "label": "Estágio em UX Design",
+      "institution": "BTG Pactual",
+      "year_start": 2024,
+      "year_end": 2024,
+      "duration": { "value": 4, "metric": "month" },
+      "description": "Melhoria das telas do aplicativo BTG Investimentos focando uma melhor experiência do usuário. Esse projeto usou Figma e seguiu Double Diamond como framework."
+    },
+    {
+      "label": " Estágio em Desenvolvimento de Software",
+      "institution": "BTG Pactual",
+      "year_start": 2023,
+      "year_end": 2023,
+      "duration": { "value": 8, "metric": "month" },
+      "description": "Desenvolvimento de soluções e produtos de dados para uso interno do time de Data Analytics. A maioria dos produtos foi desenvolvida utilizando React, Python, SQL e PySpark."
+    },
+    {
+      "label": "Estágio em Ciência de Dados",
+      "institution": "Taqtile",
+      "year_start": 2022,
+      "year_end": 2022,
+      "duration": { "value": 4, "metric": "month" },
+      "description": "Pesquisa de modelos de machine learning e desenvolvimento de dashboardes, para monitoramento de um plataforma de e-commerce, usando Python e Pandas."
+    }
+  ],
+
+  "skills": [
+    { "label": "HTML/5",              "rating": 4, "category": "technology" },
+    { "label": "CSS/3",               "rating": 4, "category": "technology" },
+    { "label": "JavaScript",          "rating": 4, "category": "technology" },
+    { "label": "TypeScript",          "rating": 3, "category": "technology" },
+    { "label": "Python",              "rating": 4, "category": "technology" },
+    { "label": "React",               "rating": 3, "category": "technology" },
+    { "label": "Redux",               "rating": 3, "category": "technology" },
+    { "label": "Framer Motion",       "rating": 2, "category": "technology" },
+    { "label": "SQL",                 "rating": 3, "category": "technology" },
+    { "label": "GIT",                 "rating": 4, "category": "technology" },
+    { "label": "Github",              "rating": 4, "category": "tool" },
+    { "label": "Figma",               "rating": 4, "category": "tool" },
+    { "label": "Scrum / Agile",       "rating": 3, "category": "tool" },
+    { "label": "Português (nativo)",  "rating": 5, "category": "language" },
+    { "label": "Inglês (avançado)",   "rating": 4, "category": "language" }
+  ],
+
+  "education": {
+    "academic": [
+      {
+        "label": "Graduação em Engenharia da Computação",
+        "institution": "Escola Politécnica da USP",
+        "year_start": 2020,
+        "year_end": 2024,
+        "description": "Um curso de 5 anos ministrado no formato cooperativo, cuja grade prevê 4 períodos de 4 meses específicamente para estágios."
+      },
+      {
+        "label": "Iniciação Científica em AutoML e NLP",
+        "institution": "Escola Politécnica da USP",
+        "year_start": 2023,
+        "year_end": 2023,
+        "description": "Projeto de iniciação científica apresentado no 31° Simpósio Internacional de Iniciação Científica e Tecnológica da USP. Visava treinar e modelos de AutoML para classificar relatórios de acidentes na indústria de construção."
+      }
+    ],
+
+    "courses": [
+      {
+        "label": "Front-End Engineer Career Path",
+        "institution": "Codecademy",
+        "year_start": 2024,
+        "year_end": 2024,
+        "description": "Um programa de 115 horas com foco nas principais habilidades para desenvolvimento front-end, incluindo HTML, CSS, JavaScript, React e Git, com projetos e testes necessários para certificação."
+      },
+      {
+        "label": "Data Scientist in Python Course",
+        "institution": "Dataquest.io",
+        "year_start": 2020,
+        "year_end": 2021,
+        "description": "Um curso de 1 ano com 12 módulos e mais de 3=20 projetos diferentes focados nas principais habilidades de um cientista de dados, como Python, Pandas e Numpy, data cleaning, manipulação e machine learning."
+      }
+    ]
+  }
+}
