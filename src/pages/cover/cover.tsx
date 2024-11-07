@@ -24,6 +24,7 @@ export function Cover({ navigate, zIndex=0, visible=false }: CoverProps) {
         className={style['cover-sidebar']}
         linkedin={profile.contact.find((c) => c.label === 'linkedin')?.value}
         github={profile.contact.find((c) => c.label === 'github')?.value}
+        navigate={() => navigate('#profile')}
         inverse
         bottom
       />
