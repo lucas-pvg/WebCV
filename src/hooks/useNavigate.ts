@@ -43,13 +43,17 @@ export const useNavigate = (pages: string[]) => {
 
   const goToPage = useCallback((pageId: string) => {
     const pageIndex = pages.findIndex((page) => page === pageId)
+    const currentIndex = currentPage
+
     if (scrollLock || pageIndex === currentPage || pageIndex < 0 || pageIndex >= pages.length) return
     setCurrentPage(pageIndex)
     lockScroll()
 
     const animations = []
-    for (let i = currentPage; i !== pageIndex; i += pageIndex > currentPage ? 1 : -1) {
-      animations.push(animatePage(i, pageIndex > currentPage ? 'up' : 'down'))
+    for (let i = currentIndex; i !== pageIndex; i += pageIndex > currentIndex ? 1 : -1) {
+      pageIndex > currentIndex
+      ? animations.push(animatePage(i, 'up'))
+      : animations.push(animatePage(i - 1, 'down'))
     }
 
     Promise.all(animations).then(() => {

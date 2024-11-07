@@ -3,6 +3,7 @@
 }
 
 .hover:hover {
+  animation: none;
   transform: scale(1.1);
   cursor: pointer;
 }

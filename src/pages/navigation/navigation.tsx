@@ -3,6 +3,7 @@ import { ProfileContext } from '../../context/ProfileContext'
 import { useNavigate } from '../../hooks/useNavigate'
 import { Sidebar } from '../../components/sidebar/sidebar'
 import { Scrollbar } from '../../components/scrollbar/scrollbar'
+import { BackButton } from '../../components/back-button/back-button'
 
 import { Cover } from '../cover/cover'
 import { Profile } from '../profile/profile'
@@ -52,6 +53,7 @@ export function Navigation() {
         <Contact zIndex={pages.length - 5} visible={navigate.currentPage === 5 && navigate.animationEnded} />
       </div>
 
+      <BackButton style={{zIndex: pages.length - 1}} navigate={() => navigate.goToPage('#cover')} />
       <Scrollbar progress={(navigate.currentPage + 1) / pages.length}/>
     </div>
   )

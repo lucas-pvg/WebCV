@@ -17,77 +17,64 @@ export interface IconProps extends ComponentProps<'img'> {
   size?: number
   inverse?: boolean
   hover?: boolean
-  href?: string
 }
 
-export function Icon({ className, type, size=40, inverse=false, hover=false, href, ...props }: IconProps) {
+export function Icon({ className, type, size=40, inverse=false, hover=false, ...props }: IconProps) {
   const classes = [style.icon, hover && style.hover, className].join(' ')
   
   switch (type) {
     case 'down-arrow': return (
-      <a href={href} target='_blank'>
-        <img 
-          className={classes}
-          src={inverse ? DownArrowInverse : DownArrow}
-          style={{ width: size, height: size }}
-          {...props}
-        />
-      </a>
+      <img 
+        className={classes}
+        src={inverse ? DownArrowInverse : DownArrow}
+        style={{ width: size, height: size }}
+        {...props}
+      />
     )
 
     case 'email': return (
-      <a href={href} target='_blank'>
-        <img
-          className={classes}
-          src={Email}
-          style={{ width: size, height: size }}
-          {...props}
-        />
-      </a>
+      <img
+        className={classes}
+        src={Email}
+        style={{ width: size, height: size }}
+        {...props}
+      />
     )
 
     case 'github': return (
-      <a href={href} target='_blank'>
-        <img
-          className={classes}
-          src={inverse ? GithubInverse : Github}
-          style={{ width: size, height: size }}
-          {...props}
-        />
-      </a>
+      <img
+        className={classes}
+        src={inverse ? GithubInverse : Github}
+        style={{ width: size, height: size }}
+        {...props}
+      />
     )
 
     case 'linkedin': return (
-      <a href={href} target='_blank'>
-        <img
-          className={classes}
-          src={inverse ? LinkedinInverse : Linkedin}
-          style={{ width: size, height: size }}
-          {...props}
-        />
-      </a>
+      <img
+        className={classes}
+        src={inverse ? LinkedinInverse : Linkedin}
+        style={{ width: size, height: size }}
+        {...props}
+      />
     )
 
     case 'up-arrow': return (
-      <a href={href} target='_blank'>
-        <img
-          className={classes}
-          src={UpArrow}
-          style={{ width: size, height: size }}
-          {...props}
-        />
-      </a>
+      <img
+        className={classes}
+        src={UpArrow}
+        style={{ width: size, height: size }}
+        {...props}
+      />
     )
 
     case 'whatsapp': return (
-      <a href={href} target='_blank'>
-        <img
-          className={classes}
-          src={Whatsapp}
-          style={{ width: size, height: size }}
-          {...props}
-        />
-      </a>
+      <img
+        className={classes}
+        src={Whatsapp}
+        style={{ width: size, height: size }}
+        {...props}
+      />
     )
   }
 }
