@@ -65,7 +65,7 @@ export function Card({ className, name, subtitles, contacts }: CardProps) {
             contacts &&
             contacts.map((contact, i) => (
               <a className={style.contact} href={contact.link ? contact.value : undefined} target='_blank' key={i}>
-                <Icon type={contact.label as IconProps['type']} size={32} />
+                <Icon type={contact.label as IconProps['type']} size={28} />
                 <h6>{ contact.value }</h6>
               </a>
             ))
