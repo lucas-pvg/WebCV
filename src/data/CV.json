@@ -6,15 +6,15 @@
     "Graduated in Computer Engineering from USP"
   ],
   "contact": [
-    { "label": "email", "value": "lucaspvg1@gmail.com", "link": false},
-    { "label": "whatsapp", "value": "+55 (61) 982653119", "link": false },
-    { "label": "github", "value": "https://github.com/lucas-pvg", "link": true },
+    { "label": "email",    "value": "lucaspvg1@gmail.com",                    "link": false },
+    { "label": "whatsapp", "value": "+55 (61) 982653119",                     "link": false },
+    { "label": "github",   "value": "https://github.com/lucas-pvg",           "link": true },
     { "label": "linkedin", "value": "https://www.linkedin.com/in/lucas-pvg/", "link": true }
   ],
 
   "about": [
-    "Tenho 21 anos e sou apaixonado por programação, desenvolvimento front-end e UX/UI design. Atualmente curso engenharia da computação na Escola Politécnica da USP enquanto procuro complementar minha formação, de maneira mais focada em minhas áreas de interesse, com projetos, cursos e outras oportunidades.",
-    "Também sou apaixonado por música e participei de uma orquestra, nos meus ensinos fundamental e médio, durante 7 anos. A música faz parte da minha rotina, de modo que, quando não estou tocando ou aprendendo algum instrumento, estou ouvindo ou pesquisando sobre. Atualmente, toco saxofone tenor, um pouco de flauta transversal e estou tentando aprender teclado."
+    "I am a 23-year-old passionate about programming, front-end development, and UX/UI design. I am graduated in Computer Engineering from University of Sao Paulo and I actively seek to deepen my expertise in these fields through projects, courses, and other hands-on opportunities.",
+    "I am also passionate about music, having played in an orchestra for seven years during my elementary and high school years. Music is an integral part of my daily routine—when I'm not playing or learning an instrument, I am often listening to or researching music. Currently, I play the tenor saxophone, some transverse flute, and am working on learning the keyboard."
   ],
 
   "experience": [
@@ -24,7 +24,7 @@
       "year_start": 2024,
       "year_end": 2024,
       "duration": { "value": 4, "metric": "month" },
-      "description": "Design and revamp of BTG Investments app screens, using Figma, aimed at improving customer experience."
+      "description": "Design and revamp of BTG Investments app screens aimed at improving customer experience. This project used Figma and followed Double Diamond framework throughout the process."
     },
     {
       "label": "Software Development Intership",
@@ -32,7 +32,7 @@
       "year_start": 2023,
       "year_end": 2023,
       "duration": { "value": 8, "metric": "month" },
-      "description": "Development of web solutions and data products for the BTG Pactual Data Analytics team to use within their workflow."
+      "description": "Development of web solutions and data products for the BTG Pactual Data Analytics team to use within their workflow. Most of them were developed using React, Python, SQL and PySpark."
     },
     {
       "label": "Data Science Intership",
@@ -40,7 +40,7 @@
       "year_start": 2022,
       "year_end": 2022,
       "duration": { "value": 4, "metric": "month" },
-      "description": "Research on machine learning models and development of dashboards for an e-commerce platform monitoring."
+      "description": "Research on machine learning models and development of dashboards for an e-commerce platform monitoring usign Python and Pandas."
     }
   ],
 
@@ -52,6 +52,7 @@
     { "label": "Python",              "rating": 4, "category": "technology" },
     { "label": "React",               "rating": 3, "category": "technology" },
     { "label": "Redux",               "rating": 3, "category": "technology" },
+    { "label": "Framer Motion",       "rating": 2, "category": "technology" },
     { "label": "SQL",                 "rating": 3, "category": "technology" },
     { "label": "GIT",                 "rating": 4, "category": "technology" },
     { "label": "Github",              "rating": 4, "category": "tool" },
@@ -68,7 +69,14 @@
         "institution": "University of Sao Paulo - Brazil",
         "year_start": 2020,
         "year_end": 2024,
-        "description": "A 5 year bachelor's degree in Computer Engineering with 4 modules dedicated for 4 months internships."
+        "description": "A 5 year bachelor's degree in Computer Engineering with 4 modules dedicated for internships of 4 months each."
+      },
+      {
+        "label": "Undergraduate Research Program in AutoML e NLP",
+        "institution": "University of Sao Paulo - Brazil",
+        "year_start": 2023,
+        "year_end": 2023,
+        "description": "Undergraduate research project presented at the 31st International Symposium on Scientific and Technological Initiation at USP. Focused on training AutoML models to classify accident reports in the construction industry."
       }
     ],
 
@@ -78,14 +86,14 @@
         "institution": "Codecademy",
         "year_start": 2024,
         "year_end": 2024,
-        "description": ""
+        "description": "A 115-hour program focused on essential front-end development skills, including HTML, CSS, JavaScript, React, and Git, with projects and exams required for certification."
       },
       {
         "label": "Data Scientist in Python Course",
         "institution": "Dataquest.io",
         "year_start": 2020,
         "year_end": 2021,
-        "description": ""
+        "description": "A 1-year course that counts with 12 modules and over 20 different projects focused on essencial data science skills, such as Python, Pandas and Numpy, data cleaning and manipulation, and machine learning"
       }
     ]
   }
