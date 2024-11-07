@@ -29,9 +29,10 @@ interface SidebarProps extends VariantProps<typeof sidebarVariants> {
   zIndex?: number
   linkedin?: string
   github?: string
+  navigate?: Function
 }
 
-export function Sidebar({ className, inverse, bottom, zIndex=0, linkedin, github }: SidebarProps) {
+export function Sidebar({ className, inverse, bottom, zIndex=0, linkedin, github, navigate }: SidebarProps) {
   const classes = className
     ? `${sidebarVariants({ inverse, bottom })} ${className}`
     : sidebarVariants({ inverse, bottom })
@@ -41,8 +42,13 @@ export function Sidebar({ className, inverse, bottom, zIndex=0, linkedin, github
       <div className={style.vl} />
 
       <div className={style.icons}>
-        <Icon className={style['side-icon']} href={linkedin} size={32} type='linkedin' inverse={inverse} hover />
-        <Icon className={style['side-icon']} href={github} size={32} type='github' inverse={inverse} hover />
+        <a href={linkedin} target='_blank'>
+          <Icon className={style['side-icon']} size={32} type='linkedin' inverse={inverse} hover />
+        </a>
+        
+        <a href={github} target='_blank'>
+          <Icon className={style['side-icon']} size={32} type='github' inverse={inverse} hover />
+        </a>
       </div>
 
       {
@@ -50,7 +56,14 @@ export function Sidebar({ className, inverse, bottom, zIndex=0, linkedin, github
         ? (
           <div className={style['bottom-container']}>
             <div className={style.box} />
-            <Icon className={style['bottom-icon']} type='down-arrow' size={28} inverse={inverse} hover />
+            <Icon 
+              onClick={() => navigate && navigate()}
+              className={style['bottom-icon']}
+              type='down-arrow'
+              size={28}
+              inverse={inverse}
+              hover
+            />
           </div>
         )
         : <div className={style.vl} />

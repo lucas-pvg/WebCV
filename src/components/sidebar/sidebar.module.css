@@ -47,12 +47,23 @@
 
 .bottom-icon {
   transform: translate(0, 50%);
+  animation: upDown 1s linear infinite;
+  transition: transform .2s ease-in-out;
 }
 
 .bottom-icon:hover {
+  animation: none;
   transform:
     translate(0, 50%)
-    scale(1.2);
+    scale(1.1);
+}
+
+@keyframes upDown {
+  0% {transform: translateY(50%);}
+  25% {transform: translateY(65%);}
+  50% {transform: translateY(50%);}
+  75% {transform: translateY(35%);}
+  100% {transform: translateY(50%);}
 }
 
 .sidebar.bottom {
