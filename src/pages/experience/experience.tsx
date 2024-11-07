@@ -23,7 +23,7 @@ export function Experience({ zIndex=0, visible=false }: ExperienceProps) {
         visible &&
         <Page 
           title='Experience'
-          description="Here's a timeline of my working experience up until now along with a summary of what I developed in each one of them."
+          description="Here's a timeline of my working experience up until now along."
         >
           <section className={style.content}>
             <SectionTitle title='Career' />
