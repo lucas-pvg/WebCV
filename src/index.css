@@ -1,8 +1,11 @@
 :root {
   --primary: #8B75BB;
+  --primary-light: #a998cd;
+  --primary-dark: #7054ab;
   --secondary: #67707E;
   --text: #444440;
   --text-inverse: #E8E8E8;
+  --text-inverse-dark: #cfcfcf;
   --background: #E8E8E8;
   --background-primary: #E2DDEE;
   --shadow: 8px 8px 24px #1b1b1880;
