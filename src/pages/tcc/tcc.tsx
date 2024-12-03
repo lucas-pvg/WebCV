@@ -61,7 +61,7 @@ export function TCC() {
               <div className={style['profile-info']}>
                 <h6 className={style['profile-name']}>Prof. Dr. Fábio Levy Siqueira</h6>
                 <div className={style['profile-links']}>
-                  <a href='https://www.linkedin.com/in/lucas-pvg/' target="_blank">
+                  <a href='https://www.linkedin.com/in/levysiqueira/' target="_blank">
                     <FaLinkedin size={24} /> 
                   </a>
                   <a href='https://github.com/levysiqueira' target="_blank">
@@ -93,7 +93,7 @@ export function TCC() {
                 <img src={PedrinhoIMG} />
                 <h6 className={style['profile-name']}>Pedro Henrique Rodrigues de Viveiros</h6>
                 <div className={style['profile-links']}>
-                  <a href='https://www.linkedin.com/in/lucas-pvg/' target="_blank">
+                  <a href='https://www.linkedin.com/in/pedrohrviveiros/' target="_blank">
                     <FaLinkedin size={24} /> 
                   </a>
                   <a href='https://github.com/pedrohrodrig' target="_blank">
@@ -106,7 +106,7 @@ export function TCC() {
                 <img src={VictorIMG} />
                 <h6 className={style['profile-name']}>Victor de Almeida Santana</h6>
                 <div className={style['profile-links']}>
-                  <a href='https://www.linkedin.com/in/lucas-pvg/' target="_blank">
+                  <a href='https://www.linkedin.com/in/victor-santana-50aa1b208/' target="_blank">
                     <FaLinkedin size={24} /> 
                   </a>
                   <a href='https://github.com/VictorASantana' target="_blank">
