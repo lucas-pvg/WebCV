@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router'
 import style from './cover-navbar.module.css'
 
 interface CoverNavbarProps {
@@ -8,6 +9,7 @@ interface CoverNavbarProps {
 
 export function CoverNavbar({ className, navigate, download=false }: CoverNavbarProps) {
   const classes = `${className ? className : ''}`
+  const nav = useNavigate()
 
   return (
     <nav className={classes}>
@@ -16,7 +18,7 @@ export function CoverNavbar({ className, navigate, download=false }: CoverNavbar
         <li onClick={() => navigate('#experience')} className={style.link}>Experience</li>
         <li onClick={() => navigate('#skills')} className={style.link}>Skills</li>
         <li onClick={() => navigate('#education')} className={style.link}>Education</li>
-        <li className={style.link}>Projects</li>
+        <li onClick={() => nav('/tcc')} className={style.link}>Projects</li>
         <li onClick={() => navigate('#contact')} className={style.link}>Contact</li>
         
         {
