@@ -1,0 +1,23 @@
+.button {
+  padding: 12px 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  background: var(--secondary-dark);
+
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  color: var(--text-inverse);
+
+  transition: 
+    transform 0.15s ease-in-out,
+    background 0.15s ease-in-out;
+}
+
+.button:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  background: var(--secondary);
+}
