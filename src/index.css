@@ -108,3 +108,11 @@ a {
   text-decoration: none;
   font-size: 14px;
 }
+
+input,
+textarea,
+button,
+select,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
