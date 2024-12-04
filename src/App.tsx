@@ -22,6 +22,7 @@ function App() {
           <Route index element={<TCC />} />
           <Route path="download/banner" element={<Download fileName="Banner.pdf" />} />
           <Route path="download/thesis" element={<Download fileName="Desenvolvimento de uma solução para monitoramento de presença e engajamento para o Cursinho Popular da Escola Politécnica da Universidade de São Paulo.pdf" />} />
+          <Route path="download/release" element={<Download fileName="Press Release.pdf" />} />
         </Route>
         
       </Routes>

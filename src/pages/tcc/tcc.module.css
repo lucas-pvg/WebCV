@@ -13,9 +13,18 @@
 
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: space-between;
   padding: 16px 24px;
   background-color: var(--primary);
+}
+
+.header-title {
+  color: var(--text-inverse);
+  text-wrap: nowrap;
+}
+
+.navbar {
+  display: block;
 }
 
 .navlist {
@@ -25,8 +34,30 @@
   gap: 36px;
 }
 
-.navlink {
+.resnavbar {
+  display: none;
+  position: relative;
+  color: var(--text-inverse);
+}
+
+.resnavlist {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  position: absolute;
+  right: -8px;
+  top: 68px;
+
+  background-color: var(--primary);
+  border-radius: 12px;
+}
+
+.navlink,
+.resnavlink {
   text-decoration: none;
+  text-wrap: nowrap;
   font-size: 14px;
   color: var(--text-inverse);
   transition: transform .15s ease-in-out;
@@ -37,7 +68,31 @@
   }
 }
 
-.navlink:hover {
+.resnavlink {
+  width: 100%;
+  font-weight: 400;
+
+  a {
+    width: 100%;
+    padding: 12px 24px;
+  }
+}
+
+.resnavlink:first-of-type {
+  a {
+    padding-top: 24px;
+  }
+}
+
+.resnavlink:last-of-type {
+  a {
+    padding-bottom: 24px;
+  }
+}
+
+
+.navlink:hover,
+.resnavlink {
   cursor: pointer;
   transform: scale(1.05);
 
@@ -168,6 +223,7 @@
   margin-bottom: 12px;
   list-style-type: none;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   gap: 28px;
 }
@@ -216,8 +272,99 @@
   width: 100%;
 }
 
-@media (min-width: 710px) and (max-width: 1200px) {
-  .header {
+@media (max-width: 1000px) {
+  .navbar {
+    display: none;
+  }
+
+  .resnavbar {
+    display: block;
+  }
+}
+
+@media (max-width: 710px) {
+  .hero {
+    gap: 24px;
+    padding: 32px;
+  }
+
+  .title {
+    width: 100%;
+    min-width: 100px;
+    max-width: 600px;
+  }
+  
+  .title h1 {
+    font-size: 20px;
+    line-height: 150%;
+    letter-spacing: .8px;
+  }
+
+  .content {
+    width: 80%;
+    max-width: 600px;
+    min-width: 100px;
+    margin: 32px 0;
+  }
+
+  .group {
+    flex-direction: column;
     justify-content: center;
+    gap: 8px;
+  }
+  
+  .profile img {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .profile.horizontal {
+    gap: 16px;
+  }
+  
+  .profile.vertical {
+    max-width: none;
+    flex-direction: row;
+    gap: 16px;
+  }
+  
+  .profile-info {
+    gap: 8px;
+  }
+  
+  .profile-name {
+    text-align: start;
+  }
+
+  .profile-links {
+    gap: 8px;
+  }
+
+  .technologies {
+    justify-content: flex-start;
+  }
+
+  .home-img {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+  }
+  
+  .web-img {
+    width: 100%;
+    border-radius: 8px;
+  }
+  
+  .mob-img {
+    width: 50%;
+    border-radius: 8px;
+  }
+  
+  .arch-img {
+    margin-bottom: 12px;
+    width: 100%;
+    float: none;
+    margin-right: 0;
   }
 }
