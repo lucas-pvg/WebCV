@@ -1,6 +1,10 @@
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+
 import { FaLinkedin, FaReact, FaGithub } from "react-icons/fa";
 import { TbBrandReactNative, TbBrandDjango } from "react-icons/tb";
 import { SiRedux, SiPostgresql } from "react-icons/si";
+import { IoIosMenu } from "react-icons/io";
 import { SectionTitle } from '../../components/section-title/section-title'
 import { Button } from "../../components/button/button";
 
@@ -16,9 +20,13 @@ import ArchitectureIMG from '../../assets/Diagrama Arquitetural.png'
 import style from './tcc.module.css'
 
 export function TCC() {
+  const [ navbar, setNavbar ] = useState(false)
+
   return (
     <div className={style.tcc}>
       <header className={style.header}>
+        <h5 className={style['header-title']}>Projeto de Formatura - USP</h5>
+
         <nav className={style.navbar}>
           <ul className={style.navlist}>
             <li className={style.navlink}><a href='#project'>Projeto</a></li>
@@ -28,6 +36,35 @@ export function TCC() {
             <li className={style.navlink}><a href='#results'>Resultados</a></li>
             <li className={style.navlink}><a href='https://beacons.ai/tcc_cp' target='_blank'>Documentação</a></li>
           </ul>
+        </nav>
+
+        <nav className={style.resnavbar}>
+          <IoIosMenu size={32} onClick={() => setNavbar(prev => !prev)} />
+          
+          <AnimatePresence>
+            {
+              navbar &&
+              <motion.ul 
+                className={style.resnavlist}
+                onClick={() => setNavbar(false)}
+                initial={{ opacity: 0, transform: "translateY(-20%)" }}
+                animate={{ opacity: 1, transform: "translateY(0)" }}
+                exit={{ opacity: 0, transform: "translateY(-20%)" }}
+                transition={{
+                  duration: .5,
+                  ease: [0.15, 0.8, 0.5, 1]
+                }}
+              >
+                <li className={style.resnavlink}><a href='#project'>Projeto</a></li>
+                <li className={style.resnavlink}><a href='#about-us'>Quem somos?</a></li>
+                <li className={style.resnavlink}><a href='#objectives'>Motivação</a></li>
+                <li className={style.resnavlink}><a href='#development'>Desenvolvimento</a></li>
+                <li className={style.resnavlink}><a href='#results'>Resultados</a></li>
+                <li className={style.resnavlink}><a href='https://beacons.ai/tcc_cp' target='_blank'>Documentação</a></li>
+              </motion.ul>
+            }
+          </AnimatePresence>
+          
         </nav>
       </header>
 
@@ -81,40 +118,49 @@ export function TCC() {
             <div className={style.group}>
               <div className={[style.profile, style.vertical].join(' ')}>
                 <img src={LuquinhasIMG} />
-                <h6 className={style['profile-name']}>Lucas Pavan Garieri</h6>
-                <div className={style['profile-links']}>
-                  <a href='https://www.linkedin.com/in/lucas-pvg/' target="_blank">
-                    <FaLinkedin size={24} /> 
-                  </a>
-                  <a href='https://github.com/lucas-pvg' target="_blank">
-                    <FaGithub size={24} /> 
-                  </a>
+
+                <div className={style['profile-info']}>
+                  <h6 className={style['profile-name']}>Lucas Pavan Garieri</h6>
+                  <div className={style['profile-links']}>
+                    <a href='https://www.linkedin.com/in/lucas-pvg/' target="_blank">
+                      <FaLinkedin size={24} /> 
+                    </a>
+                    <a href='https://github.com/lucas-pvg' target="_blank">
+                      <FaGithub size={24} /> 
+                    </a>
+                  </div>
                 </div>
               </div>
 
               <div className={[style.profile, style.vertical].join(' ')}>
                 <img src={PedrinhoIMG} />
-                <h6 className={style['profile-name']}>Pedro Henrique Rodrigues de Viveiros</h6>
-                <div className={style['profile-links']}>
-                  <a href='https://www.linkedin.com/in/pedrohrviveiros/' target="_blank">
-                    <FaLinkedin size={24} /> 
-                  </a>
-                  <a href='https://github.com/pedrohrodrig' target="_blank">
-                    <FaGithub size={24} /> 
-                  </a>
+
+                <div className={style['profile-info']}>
+                  <h6 className={style['profile-name']}>Pedro Henrique Rodrigues de Viveiros</h6>
+                  <div className={style['profile-links']}>
+                    <a href='https://www.linkedin.com/in/pedrohrviveiros/' target="_blank">
+                      <FaLinkedin size={24} /> 
+                    </a>
+                    <a href='https://github.com/pedrohrodrig' target="_blank">
+                      <FaGithub size={24} /> 
+                    </a>
+                  </div>
                 </div>
               </div>
       
               <div className={[style.profile, style.vertical].join(' ')}>
                 <img src={VictorIMG} />
-                <h6 className={style['profile-name']}>Victor de Almeida Santana</h6>
-                <div className={style['profile-links']}>
-                  <a href='https://www.linkedin.com/in/victor-santana-50aa1b208/' target="_blank">
-                    <FaLinkedin size={24} /> 
-                  </a>
-                  <a href='https://github.com/VictorASantana' target="_blank">
-                    <FaGithub size={24} /> 
-                  </a>
+
+                <div className={style['profile-info']}>
+                  <h6 className={style['profile-name']}>Victor de Almeida Santana</h6>
+                  <div className={style['profile-links']}>
+                    <a href='https://www.linkedin.com/in/victor-santana-50aa1b208/' target="_blank">
+                      <FaLinkedin size={24} /> 
+                    </a>
+                    <a href='https://github.com/VictorASantana' target="_blank">
+                      <FaGithub size={24} /> 
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
