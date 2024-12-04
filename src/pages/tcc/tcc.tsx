@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 import { FaLinkedin, FaReact, FaGithub } from "react-icons/fa";
@@ -22,6 +22,32 @@ import style from './tcc.module.css'
 
 export function TCC() {
   const [ navbar, setNavbar ] = useState(false)
+  const resNavRef = useRef<HTMLUListElement | null>(null)
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (resNavRef.current && !resNavRef.current.contains(event.target as Node)) {
+        setNavbar(false)
+      }
+    }
+
+    const handleScroll = () => {
+      setNavbar(false)
+    }
+
+    if (navbar) {
+      document.addEventListener("mousedown", handleClickOutside)
+      document.addEventListener("scroll", handleScroll)
+    } else {
+      document.removeEventListener("mousedown", handleClickOutside)
+      document.removeEventListener("scroll", handleScroll)
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside)
+      document.removeEventListener("scroll", handleScroll)
+    }
+  }, [navbar])
 
   return (
     <div className={style.tcc}>
@@ -39,8 +65,12 @@ export function TCC() {
           </ul>
         </nav>
 
-        <nav className={style.resnavbar}>
-          <IoIosMenu size={32} onClick={() => setNavbar(prev => !prev)} />
+        <nav ref={resNavRef} className={style.resnavbar}>
+          <IoIosMenu size={32} onClick={() => {
+            setNavbar(prev => !prev)
+            console.log('Clicked')
+            console.log(navbar)
+          }} />
           
           <AnimatePresence>
             {
