@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 import { FaLinkedin, FaReact, FaGithub } from "react-icons/fa";
@@ -20,8 +20,13 @@ import ArchitectureIMG from '../../assets/Diagrama Arquitetural.png'
 
 import style from './tcc.module.css'
 
-export function TCC() {
+interface TCCProps {
+  appRef: React.RefObject<HTMLDivElement>
+}
+
+export function TCC({ appRef }: TCCProps) {
   const [ navbar, setNavbar ] = useState(false)
+  const [ navAnimation, setNavAnimation ] = useState(false)
   const resNavRef = useRef<HTMLUListElement | null>(null)
 
   useEffect(() => {
@@ -35,19 +40,19 @@ export function TCC() {
       setNavbar(false)
     }
 
-    if (navbar) {
+    if (navbar && !navAnimation) {
       document.addEventListener("mousedown", handleClickOutside)
-      document.addEventListener("scroll", handleScroll)
+      appRef.current?.addEventListener("scroll", handleScroll)
     } else {
       document.removeEventListener("mousedown", handleClickOutside)
-      document.removeEventListener("scroll", handleScroll)
+      appRef.current?.removeEventListener("scroll", handleScroll)
     }
 
     return () => {
       document.removeEventListener("mousedown", handleClickOutside)
-      document.removeEventListener("scroll", handleScroll)
+      appRef.current?.removeEventListener("scroll", handleScroll)
     }
-  }, [navbar])
+  }, [navbar, !navAnimation])
 
   return (
     <div className={style.tcc}>
@@ -66,32 +71,30 @@ export function TCC() {
         </nav>
 
         <nav ref={resNavRef} className={style.resnavbar}>
-          <IoIosMenu size={32} onClick={() => {
-            setNavbar(prev => !prev)
-            console.log('Clicked')
-            console.log(navbar)
-          }} />
+          <IoIosMenu size={32} onClick={() => {if (!navAnimation) setNavbar(prev => !prev)}} />
           
           <AnimatePresence>
             {
               navbar &&
               <motion.ul 
                 className={style.resnavlist}
-                onClick={() => setNavbar(false)}
-                initial={{ opacity: 0, transform: "translateY(-20%)" }}
+                onClick={() => {if (!navAnimation) setNavbar(false)}}
+                onAnimationStart={() => setNavAnimation(true)}
+                onAnimationComplete={() => setNavAnimation(false)}
+                initial={{ opacity: 0, transform: "translateY(-50px)" }}
                 animate={{ opacity: 1, transform: "translateY(0)" }}
-                exit={{ opacity: 0, transform: "translateY(-20%)" }}
+                exit={{ opacity: 0, transform: "translateY(-50px)" }}
                 transition={{
                   duration: .5,
                   ease: [0.15, 0.8, 0.5, 1]
                 }}
               >
-                <li className={style.resnavlink}><a href='#project'>Projeto</a></li>
-                <li className={style.resnavlink}><a href='#about-us'>Quem somos?</a></li>
-                <li className={style.resnavlink}><a href='#objectives'>Motivação</a></li>
-                <li className={style.resnavlink}><a href='#development'>Desenvolvimento</a></li>
-                <li className={style.resnavlink}><a href='#results'>Resultados</a></li>
-                <li className={style.resnavlink}><a href='https://beacons.ai/tcc_cp' target='_blank'>Documentação</a></li>
+                <li className={style.resnavlink}><a className={navAnimation ? style.disabled : undefined} href='#project'>Projeto</a></li>
+                <li className={style.resnavlink}><a className={navAnimation ? style.disabled : undefined} href='#about-us'>Quem somos?</a></li>
+                <li className={style.resnavlink}><a className={navAnimation ? style.disabled : undefined} href='#objectives'>Motivação</a></li>
+                <li className={style.resnavlink}><a className={navAnimation ? style.disabled : undefined} href='#development'>Desenvolvimento</a></li>
+                <li className={style.resnavlink}><a className={navAnimation ? style.disabled : undefined} href='#results'>Resultados</a></li>
+                <li className={style.resnavlink}><a className={navAnimation ? style.disabled : undefined} href='https://beacons.ai/tcc_cp' target='_blank'>Documentação</a></li>
               </motion.ul>
             }
           </AnimatePresence>
