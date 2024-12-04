@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { Routes, Route, useNavigate } from "react-router";
 import { Navigation } from './pages/navigation/navigation'
 import { TCC } from "./pages/tcc/tcc";
@@ -10,8 +11,21 @@ interface DownloadProps {
 function Download({ fileName }: DownloadProps) {
   const navigate = useNavigate()
 
-  window.location.href = `/tcc-files/${fileName}`
-  navigate('/tcc')
+  useEffect(() => {
+    const fileUrl = `/tcc-files/${fileName}`
+    const link = document.createElement("a")
+
+    link.href = fileUrl
+    link.download = fileName
+    link.click()
+
+    const timeout = setTimeout(() => {
+      navigate("/tcc")
+    }, 1000);
+
+    return () => clearTimeout(timeout)
+  }, [fileName, navigate])
+
   return null
 }
 
