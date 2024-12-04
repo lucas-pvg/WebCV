@@ -66,12 +66,13 @@
 
   a {
     color: var(--text-inverse);
-    transition: color .15s ease-in-out;
+    transition: 
+      color .15s ease-in-out,
+      background .1s ease-in-out;
   }
 }
 
-.navlink:hover,
-.resnavlink:hover {
+.navlink:hover {
   cursor: pointer;
   transform: scale(1.05);
 
@@ -80,9 +81,15 @@
   }
 }
 
+.resnavlink:hover {
+  cursor: pointer;
+
+  a {
+    background: var(--primary-light);
+  }
+}
+
 .resnavlink:active {
-  transform: scale(1);
-  
   a {
     background: var(--primary-light);
   }
@@ -360,6 +367,12 @@
 
   .profile-links {
     gap: 8px;
+  }
+
+  .profile-links a:hover {
+    cursor: pointer;
+    color: inherit;
+    transform: none;
   }
 
   .technologies {
