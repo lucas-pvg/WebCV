@@ -45,6 +45,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 12px 0;
 
   position: absolute;
   right: -8px;
@@ -56,6 +57,7 @@
 
 .navlink,
 .resnavlink {
+  overflow: hidden;
   text-decoration: none;
   text-wrap: nowrap;
   font-size: 14px;
@@ -68,6 +70,24 @@
   }
 }
 
+.navlink:hover,
+.resnavlink:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+
+  a {
+    color: var(--text-inverse-dark);
+  }
+}
+
+.resnavlink:active {
+  transform: scale(1);
+  
+  a {
+    background: var(--primary-light);
+  }
+}
+
 .resnavlink {
   width: 100%;
   font-weight: 400;
@@ -75,28 +95,6 @@
   a {
     width: 100%;
     padding: 12px 24px;
-  }
-}
-
-.resnavlink:first-of-type {
-  a {
-    padding-top: 24px;
-  }
-}
-
-.resnavlink:last-of-type {
-  a {
-    padding-bottom: 24px;
-  }
-}
-
-.navlink:hover,
-.resnavlink {
-  cursor: pointer;
-  transform: scale(1.05);
-
-  a {
-    color: var(--text-inverse-dark);
   }
 }
 
