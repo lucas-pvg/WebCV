@@ -14,6 +14,7 @@ import PedrinhoIMG from '../../assets/Pedrinho.jpeg'
 import VictorIMG from '../../assets/Victor.jpeg'
 import HomeWebIMG from '../../assets/Home.png'
 import HomeMobileIMG from '../../assets/Home-mobile.png'
+import AttMobileIMG from '../../assets/attendance.png'
 import CronogramaIMG from '../../assets/cronograma teste.png'
 import ArchitectureIMG from '../../assets/Diagrama Arquitetural.png'
 
@@ -85,7 +86,11 @@ export function TCC() {
           
           <div className={style['home-img']}>
             <img className={style['web-img']} src={HomeWebIMG} />
-            <img className={style['mob-img']} src={HomeMobileIMG} />
+
+            <div className={style['row-img']}>
+              <img className={style['mob-img']} src={HomeMobileIMG} />
+              <img className={[style['mob-img'], style['res-img']].join(' ')} src={AttMobileIMG} />
+            </div>
           </div>
         </section>
 
