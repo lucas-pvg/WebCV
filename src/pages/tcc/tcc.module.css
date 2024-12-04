@@ -90,7 +90,6 @@
   }
 }
 
-
 .navlink:hover,
 .resnavlink {
   cursor: pointer;
@@ -99,6 +98,10 @@
   a {
     color: var(--text-inverse-dark);
   }
+}
+
+.disabled {
+  pointer-events: none;
 }
 
 .hero {
