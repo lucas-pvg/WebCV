@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router";
+import { Routes, Route, useNavigate } from "react-router";
 import { Navigation } from './pages/navigation/navigation'
 import { TCC } from "./pages/tcc/tcc";
 import './App.css'
@@ -8,7 +8,10 @@ interface DownloadProps {
 }
 
 function Download({ fileName }: DownloadProps) {
+  const navigate = useNavigate()
+
   window.location.href = `/tcc-files/${fileName}`
+  navigate('/tcc')
   return null
 }
 

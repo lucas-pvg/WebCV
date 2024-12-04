@@ -175,6 +175,10 @@
 
 .profile.horizontal {
   gap: 32px;
+  
+  .profile-links {
+    justify-content: flex-start;
+  }
 }
 
 .profile.vertical {
@@ -182,6 +186,10 @@
   max-width: 300px;
   flex-direction: column;
   gap: 16px;
+
+  .profile-links {
+    justify-content: center;
+  }
 }
 
 .profile-info {
@@ -196,7 +204,6 @@
 
 .profile-links {
   display: flex;
-  align-items: flex-start;
   gap: 16px;
 }
 
@@ -243,6 +250,12 @@
   justify-content: space-between;
 }
 
+.row-img {
+  width: calc((100% - 24px)/4);
+  display: flex;
+  gap: 12px;
+}
+
 .web-img {
   height: auto;
   width: calc(3*(100% - 24px)/4);
@@ -252,9 +265,13 @@
 
 .mob-img {
   height: auto;
-  width: calc((100% - 24px)/4);
+  width: 100%;
   border: solid 1px var(--secondary);
   border-radius: 12px;
+}
+
+.res-img {
+  display: none;
 }
 
 .arch-img {
@@ -326,6 +343,10 @@
     max-width: none;
     flex-direction: row;
     gap: 16px;
+
+    .profile-links {
+      justify-content: flex-start;
+    }
   }
   
   .profile-info {
@@ -350,14 +371,22 @@
     align-items: center;
     gap: 12px;
   }
+
+  .row-img {
+    width: 100%;
+  }
   
   .web-img {
     width: 100%;
     border-radius: 8px;
   }
+
+  .res-img {
+    display: block;
+  }
   
   .mob-img {
-    width: 50%;
+    width: calc((100% - 12px)/2);
     border-radius: 8px;
   }
   
