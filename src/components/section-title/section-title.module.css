@@ -4,6 +4,7 @@
   align-items: center;
   justify-content: start;
   gap: 16px;
+  text-wrap: nowrap;
 }
 
 .left,
@@ -15,9 +16,23 @@
 }
 
 .left {
-  width: 60px;
+  width: 25%;
+  max-width: 60px;
 }
 
 .right {
-  width: 180px;
+  width: 75%;
+  max-width: 180px;
+}
+
+@media (max-width: 710px) {
+  .left {
+    width: 50%;
+    max-width: none;
+  }
+  
+  .right {
+    width: 50%;
+    max-width: none;
+  }
 }
