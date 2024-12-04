@@ -2,6 +2,7 @@ import { FaLinkedin, FaReact, FaGithub } from "react-icons/fa";
 import { TbBrandReactNative, TbBrandDjango } from "react-icons/tb";
 import { SiRedux, SiPostgresql } from "react-icons/si";
 import { SectionTitle } from '../../components/section-title/section-title'
+import { Button } from "../../components/button/button";
 
 import LevyIMG from '../../assets/Levy.jpg'
 import LuquinhasIMG from '../../assets/Lquinhas.jpg'
@@ -25,7 +26,7 @@ export function TCC() {
             <li className={style.navlink}><a href='#objectives'>Motivação</a></li>
             <li className={style.navlink}><a href='#development'>Desenvolvimento</a></li>
             <li className={style.navlink}><a href='#results'>Resultados</a></li>
-            <li className={style.navlink}><a href='#documentation'>Documentação</a></li>
+            <li className={style.navlink}><a href='https://beacons.ai/tcc_cp' target='_blank'>Documentação</a></li>
           </ul>
         </nav>
       </header>
@@ -34,6 +35,8 @@ export function TCC() {
         <div className={style.title}>
           <h1>Desenvolvimento de uma Solução para Monitoramento de Presença e Engajamento para o Cursinho Popular da Escola Politécnica da Universidade de São Paulo</h1>
         </div>
+
+        <Button to='https://beacons.ai/tcc_cp' target='_blank'>Links do Projeto</Button>
       </div>
 
       <main className={style.content}>
@@ -170,10 +173,6 @@ export function TCC() {
             <h5>Pesquisa e Feedback</h5>
             <p>Após o Teste Prático, passou-se um formulário para recolher opiniões e sugestões a respeito de ambas as plataformas. Essa etapa visa recolher de maneira mais estruturada e documentada sugestões e possíveis novas features a serem implementadas previamente ao lançamento das plataformas</p>
           </div>
-        </section>
-
-        <section id='documentation' className={[style.section, style.documentation].join(' ')}>
-          <SectionTitle title='Documentação do Projeto' />
         </section>
       </main>
     </div>
