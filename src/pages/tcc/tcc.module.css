@@ -66,9 +66,7 @@
 
   a {
     color: var(--text-inverse);
-    transition: 
-      color .15s ease-in-out,
-      background .1s ease-in-out;
+    transition: color .15s ease-in-out,
   }
 }
 
