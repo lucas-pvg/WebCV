@@ -13,19 +13,7 @@ function Download({ fileName }: DownloadProps) {
 
   useEffect(() => {
     const fileUrl = `/tcc-files/${fileName}`
-    window.open(fileUrl, "_blank");
-
-    // const link = document.createElement("a")
-
-    // link.href = fileUrl
-    // link.download = fileName
-    // link.click()
-
-    // const timeout = setTimeout(() => {
-    //   navigate("/tcc")
-    // }, 1000);
-
-    // return () => clearTimeout(timeout)
+    window.location.href = fileUrl;
   }, [fileName, navigate])
 
   return null
